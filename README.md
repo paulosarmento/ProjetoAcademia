@@ -1,3 +1,8 @@
+# Setup
+
+docker compose up -d
+npx prisma migrate dev
+
 # App
 
 GymPass Style app
@@ -30,17 +35,3 @@ GymPass Style app
 - [ ] Os dados da aplicacao precisam estar persistidos em um banco PostgressSQL;
 - [ ] Todas listas de dados precisam estar paginadas com 20 itens por pagina;
 - [ ] O usuario deve ser identificado por um JWT (Json Web Token);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
