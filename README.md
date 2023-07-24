@@ -25,8 +25,8 @@ GymPass Style app
 - [ ] O usuario nao deve poder se cadastrar com um email duplicado;
 - [ ] O usuario nao pode fazer 2 check-ins no mesmo dia;
 - [ ] O usuario nao pode fazer check-in se nao estiver perto (100m) da academia;
-- [ ] o check-in só pode ser validade até 20 minutos aps criado;
-- [ ] o check-in só pode ser validado por administradores;
+- [ ] O check-in só pode ser validade até 20 minutos aps criado;
+- [ ] O check-in só pode ser validado por administradores;
 - [ ] A academia só pode ser cadastrada por administradores;
 
 # RNFs (Requisitos nao-funcionais)

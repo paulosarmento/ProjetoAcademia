@@ -3,6 +3,7 @@
   "rules": {
     "no-useless-constructor": "off",
     "camelcase": "off",
+
     "prettier/prettier": [
       "error",
       {
