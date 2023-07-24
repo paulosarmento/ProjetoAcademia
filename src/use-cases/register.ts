@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 import { UsersRepository } from "@/repositories/users-repository";
 import { hash } from "bcryptjs";
 import { UserAlreadyExistsError } from "./errors/user-already-exists";
@@ -8,11 +7,6 @@ interface RegisterUseCaseRequest {
   email: string;
   password: string;
 }
-
-// SOLID -
-
-// D - Dependency Inversion Principle
-
 export class RegisterUseCase {
   constructor(private usersRepository: UsersRepository) {}
 
