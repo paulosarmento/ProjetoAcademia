@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { expect, describe, it, beforeEach } from "vitest";
 import { RegisterUseCase } from "./register";
 import { compare } from "bcryptjs";
@@ -9,15 +8,12 @@ let usersRepository: InMemoryUsersRepository;
 let sut: RegisterUseCase;
 
 describe(" Register Use Case", () => {
-
-  beforeEach(()=> {
+  beforeEach(() => {
     usersRepository = new InMemoryUsersRepository();
     sut = new RegisterUseCase(usersRepository);
-  })
+  });
 
   it("should be able to registration", async () => {
-    
-
     const { user } = await sut.execute({
       name: "John Doe",
       email: "paulosarmento@hotmail.com",
@@ -27,8 +23,6 @@ describe(" Register Use Case", () => {
   });
 
   it("should hash user password upon registration", async () => {
-    
-
     const { user } = await sut.execute({
       name: "John Doe",
       email: "paulosarmento@hotmail.com",
@@ -37,15 +31,13 @@ describe(" Register Use Case", () => {
 
     const isPasswordCorrectlyHashed = await compare(
       "12345",
-      user.password_hash
+      user.password_hash,
     );
 
     expect(isPasswordCorrectlyHashed).toBe(true);
   });
 
   it("should not able to register with same email twice", async () => {
-    
-
     const email = "paulosarmento@hotmail.com";
 
     await sut.execute({
@@ -59,7 +51,7 @@ describe(" Register Use Case", () => {
         name: "John Doe",
         email,
         password: "12345",
-      })
+      }),
     ).rejects.toBeInstanceOf(UserAlreadyExistsError);
   });
 });
