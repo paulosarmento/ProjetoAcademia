@@ -16,7 +16,7 @@ describe(" Get User Profile User Case ", () => {
     const createdUser = await usersRepository.create({
       name: "John Doe",
       email: "paulo.sarmento@hotmail.com",
-      password_hash: await hash("12345", 6),
+      password_hash: await hash("1s2345", 6),
     });
 
     const { user } = await sut.execute({
@@ -26,7 +26,7 @@ describe(" Get User Profile User Case ", () => {
   });
 
   it("should be able to get user profile with wrong id", async () => {
-    expect(() =>
+    await expect(() =>
       sut.execute({
         userId: "non-existing-id",
       }),
