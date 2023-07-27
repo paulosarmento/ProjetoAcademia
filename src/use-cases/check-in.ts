@@ -1,5 +1,6 @@
+/* eslint-disable prettier/prettier */
 import { CheckIn } from "@prisma/client";
-import { CheckInsRepository } from "./check-in-repository";
+import { CheckInsRepository } from "../repositories/prisma/check-ins-repository";
 
 interface CheckInUseCaseRequest {
   userId: string;
@@ -16,6 +17,14 @@ export class CheckInUseCase {
     userId,
     gymId,
   }: CheckInUseCaseRequest): Promise<CheckInUseCaseResponse> {
+    const checkInOnSameDate = await this.checkInsRepository.findByUserIdOnDate(
+      userId,
+      new Date()
+    );
+    if (checkInOnSameDate) {
+      throw new Error();
+    }
+
     const checkIn = await this.checkInsRepository.create({
       gym_id: gymId,
       user_id: userId,

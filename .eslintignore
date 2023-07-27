@@ -1,2 +1,4 @@
 node_modules
 build
+*spec.ts
+in-memory-check-ins-repository.ts

@@ -1,9 +1,19 @@
-import { CheckInsRepository } from "@/use-cases/check-in-repository";
+import { CheckInsRepository } from "@/repositories/prisma/check-ins-repository";
 import { CheckIn, Prisma } from "@prisma/client";
 import { randomUUID } from "node:crypto";
 
 export class InMemoryCheckInsRepository implements CheckInsRepository {
   public items: CheckIn[] = [];
+
+  async findByUserIdOnDate(userId: string, data: Date) {
+    const checkInOnSameDate = this.items.find(
+      (checkIn) => checkIn.user_id === userId
+    );
+    if (!checkInOnSameDate) {
+      return null;
+    }
+    return checkInOnSameDate;
+  }
 
   async create(data: Prisma.CheckInUncheckedCreateInput) {
     const checkIn = {
