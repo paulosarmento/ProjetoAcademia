@@ -12,7 +12,7 @@ GymPass Style app
 - [x] Deve ser possível se cadastrar;
 - [x] Deve ser possível se autenticar;
 - [x] Deve ser possível obter o perfil de um usuario logado;
-- [ ] Deve ser possível obter o número de check-ins realizados pelo usuario logado;
+- [x] Deve ser possível obter o número de check-ins realizados pelo usuario logado;
 - [x] Deve ser possível o usuario obter seu historico de check-ins;
 - [ ] Deve ser possível o usuario buscar academias proximas ;
 - [ ] Deve ser possível o usuario buscar academias pelo nome;
