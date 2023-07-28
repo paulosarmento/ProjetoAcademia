@@ -2,3 +2,4 @@ node_modules
 build
 *spec.ts
 in-memory-check-ins-repository.ts
+get-distance-between-coordinates.ts
