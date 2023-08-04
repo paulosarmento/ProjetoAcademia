@@ -1,19 +1,19 @@
 /* eslint-disable prettier/prettier */
 import { CheckInsRepository } from "../repositories/check-ins-repository";
 
-interface GetUserMetricsUseCaseRequestUseCaseRequest {
+interface GetUserMetricsUseCaseRequest {
   userId: string;
 }
-interface GetUserMetricsUseCaseRequestUseCaseResponse {
+interface GetUserMetricsUseCaseResponse {
   checkInsCount: number;
 }
 
-export class GetUserMetricsUseCaseRequestUseCase {
+export class GetUserMetricsUseCase {
   constructor(private checkInsRepository: CheckInsRepository) {}
 
   async execute({
     userId,
-  }: GetUserMetricsUseCaseRequestUseCaseRequest): Promise<GetUserMetricsUseCaseRequestUseCaseResponse> {
+  }: GetUserMetricsUseCaseRequest): Promise<GetUserMetricsUseCaseResponse> {
     const checkInsCount = await this.checkInsRepository.countByUserId(userId);
 
     return {
