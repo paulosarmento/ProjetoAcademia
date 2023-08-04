@@ -5,3 +5,4 @@ in-memory-check-ins-repository.ts
 get-distance-between-coordinates.ts
 in-memory-gyms-repository.ts
 late-check-in-validation-error.ts
+authenticate.ts
