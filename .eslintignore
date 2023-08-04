@@ -6,3 +6,4 @@ get-distance-between-coordinates.ts
 in-memory-gyms-repository.ts
 late-check-in-validation-error.ts
 authenticate.ts
+prisma-test-environment.ts
