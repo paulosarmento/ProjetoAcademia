@@ -9,3 +9,4 @@ authenticate.ts
 prisma-test-environment.ts
 refresh.ts
 routes.ts
+create-and-authenticate-user.ts

@@ -1,16 +1,16 @@
 /* eslint-disable prettier/prettier */
-import * as inMemoryUsersRepository from "@/repositories/in-memory/in-memory-users-repository";
 import { expect, describe, it, beforeEach } from "vitest";
 import { hash } from "bcryptjs";
 import { GetUserProfileUseCase } from "./get-user-profile";
 import { ResourceNotFoundError } from "./errors/resource-not-found-error";
+import { InMemoryUsersRepository } from "@/repositories/in-memory/in-memory-users-repository";
 
-let usersRepository: inMemoryUsersRepository.InMemoryUsersRepository;
+let usersRepository: InMemoryUsersRepository;
 let sut: GetUserProfileUseCase;
 
 describe(" Get User Profile User Case ", () => {
   beforeEach(() => {
-    usersRepository = new inMemoryUsersRepository.InMemoryUsersRepository();
+    usersRepository = new InMemoryUsersRepository();
     sut = new GetUserProfileUseCase(usersRepository);
   });
 
