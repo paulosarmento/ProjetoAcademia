@@ -7,3 +7,4 @@ in-memory-gyms-repository.ts
 late-check-in-validation-error.ts
 authenticate.ts
 prisma-test-environment.ts
+refresh.ts
