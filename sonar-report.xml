@@ -1,0 +1,44 @@
+<testExecutions version="1">
+  <file path="src/use-cases/authenticate.spec.ts">
+    <testCase name=" Authenticate Use Case  - should be able to authenticate " duration="25" />
+    <testCase name=" Authenticate Use Case  - should not be able to authenticate with wrong email " duration="0" />
+    <testCase name=" Authenticate Use Case  - should not be able to authenticate with wrong password " duration="11" />
+  </file>
+  <file path="src/use-cases/check-in.spec.ts">
+    <testCase name=" CheckIn Use Case - should be able to check in" duration="3" />
+    <testCase name=" CheckIn Use Case - should not be able to check in twice in the same day" duration="1" />
+    <testCase name=" CheckIn Use Case - should be able to check in twice but in different days" duration="1" />
+    <testCase name=" CheckIn Use Case - should not be able to check in on distant gym" duration="1" />
+  </file>
+  <file path="src/use-cases/create-gym.spec.ts">
+    <testCase name=" Create Gym Use Case - should be able to create Gym" duration="1" />
+  </file>
+  <file path="src/use-cases/fetch-nearby-gyms.spec.ts">
+    <testCase name=" Fetch Nearby Use Case - should be able to fetch nearby gyms" duration="2" />
+  </file>
+  <file path="src/use-cases/fetch-user-check-ins-history.spec.ts">
+    <testCase name=" CheckIn Use Case - should be able to fetch check-in history" duration="2" />
+    <testCase name=" CheckIn Use Case - should be able to fetch paginated check-in history" duration="1" />
+  </file>
+  <file path="src/use-cases/get-user-metrics.spec.ts">
+    <testCase name=" Get User Metrics Use Case - should be able to get check-ins count from metrics" duration="1" />
+  </file>
+  <file path="src/use-cases/get-user-profile.spec.ts">
+    <testCase name=" Get User Profile User Case  - should be able to get user profile " duration="12" />
+    <testCase name=" Get User Profile User Case  - should be able to get user profile with wrong id" duration="1" />
+  </file>
+  <file path="src/use-cases/resgister.spec.ts">
+    <testCase name=" Register Use Case - should be able to registration" duration="16" />
+    <testCase name=" Register Use Case - should hash user password upon registration" duration="21" />
+    <testCase name=" Register Use Case - should not able to register with same email twice" duration="11" />
+  </file>
+  <file path="src/use-cases/search-gyms.spec.ts">
+    <testCase name=" Search Gyms Use Case - should be able to search for gyms" duration="2" />
+    <testCase name=" Search Gyms Use Case - should be able to fetch paginated gyms search" duration="0" />
+  </file>
+  <file path="src/use-cases/validate-check-in.spec.ts">
+    <testCase name=" Validate CheckIn Use Case - should be able to validate the check-in" duration="3" />
+    <testCase name=" Validate CheckIn Use Case - should not be able to validate an inexistent check-in" duration="0" />
+    <testCase name=" Validate CheckIn Use Case - should not be able to validate the check-in after 20 minutes of its creation" duration="1" />
+  </file>
+</testExecutions>
