@@ -1,8 +1,8 @@
 <testExecutions version="1">
   <file path="src/use-cases/authenticate.spec.ts">
-    <testCase name=" Authenticate Use Case  - should be able to authenticate " duration="18" />
-    <testCase name=" Authenticate Use Case  - should not be able to authenticate with wrong email " duration="1" />
-    <testCase name=" Authenticate Use Case  - should not be able to authenticate with wrong password " duration="14" />
+    <testCase name=" Authenticate Use Case  - should be able to authenticate " duration="19" />
+    <testCase name=" Authenticate Use Case  - should not be able to authenticate with wrong email " duration="0" />
+    <testCase name=" Authenticate Use Case  - should not be able to authenticate with wrong password " duration="12" />
   </file>
   <file path="src/use-cases/check-in.spec.ts">
     <testCase name=" CheckIn Use Case - should be able to check in" duration="3" />
@@ -28,13 +28,13 @@
     <testCase name=" Get User Profile User Case  - should be able to get user profile with wrong id" duration="1" />
   </file>
   <file path="src/use-cases/resgister.spec.ts">
-    <testCase name=" Register Use Case - should be able to registration" duration="14" />
-    <testCase name=" Register Use Case - should hash user password upon registration" duration="10" />
+    <testCase name=" Register Use Case - should be able to registration" duration="11" />
+    <testCase name=" Register Use Case - should hash user password upon registration" duration="11" />
     <testCase name=" Register Use Case - should not able to register with same email twice" duration="11" />
   </file>
   <file path="src/use-cases/search-gyms.spec.ts">
-    <testCase name=" Search Gyms Use Case - should be able to search for gyms" duration="3" />
-    <testCase name=" Search Gyms Use Case - should be able to fetch paginated gyms search" duration="0" />
+    <testCase name=" Search Gyms Use Case - should be able to search for gyms" duration="1" />
+    <testCase name=" Search Gyms Use Case - should be able to fetch paginated gyms search" duration="1" />
   </file>
   <file path="src/use-cases/validate-check-in.spec.ts">
     <testCase name=" Validate CheckIn Use Case - should be able to validate the check-in" duration="3" />
